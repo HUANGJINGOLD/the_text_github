@@ -1,0 +1,44 @@
+# include<stdio.h>
+# include<stdlib.h>
+# include<time.h>
+main()
+{   
+  void textbackground(int color);
+	system("color fc");
+	int a,b;
+	char c;
+    srand(time(NULL));
+	a=1+(rand()%1000);
+	printf("这有一个数字从1到1000.\n你能猜出它吗？\n输入你猜的数字.\n");
+	scanf("%d",&b);
+	while(b!=-1)
+	{
+	if(b==a)
+	 {
+		printf("恭喜你猜对了!\n你喜欢再玩一遍吗？(y or n)?");
+		scanf("%c",&c);
+        scanf("%c",&c);
+		switch(c)
+		 {
+		  case 'y':
+		  	printf("这有一个数字.\n你能猜出它吗？\n输入你猜的数字.\n");
+	        scanf("%d",&b);
+		  	break;
+		  case 'n':
+			break;
+		 }
+  	}
+
+	while(b<a)
+	{
+		printf("低了，再试一次.");
+		scanf("%d",&b);
+	}
+
+	while(b>a)
+	{
+		printf("高了，再试一次.");
+		scanf("%d",&b);
+	}
+	}
+ }
